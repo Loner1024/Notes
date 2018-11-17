@@ -4,7 +4,7 @@
 int main(void)
 {
     int x;
-    x = 22;
+    x = 32;
     printf("%d\n",x/10);  
     return 0;
 }

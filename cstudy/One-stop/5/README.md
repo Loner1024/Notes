@@ -100,3 +100,29 @@ int main(void)
 }
 ```
 
+## 递归
+
+如果定义一个概念需要用到这个概念本身，我们称它的定义是递归的。
+
+- 编写一个递归函数求两个正整数a和b的最大公约数，使用Eucild算法（如果a除以b能整除，则最大公约数是b；否则，最大公约数等于b和a%b的最大公约数）
+
+```c
+#include <stdio.h>
+
+int number(int a,int b){
+    int g;
+    if (a%b == 0){
+        return b;
+    }
+    else{
+        number(b,a%b);
+    }
+}
+
+int main(int argc, char const *argv[])
+{
+    printf("%d\n",number(319,377)); //测试用例
+    printf("%d\n",number(24,60)); //测试用例
+    return 0;
+}
+```
